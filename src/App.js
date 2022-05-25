@@ -18,6 +18,7 @@ function App() {
     title: null,
     message: null,
   });
+  const [showEdit, setShowEdit] = useState(false);
 
   // notes store
   const [notes, setNotes] = useState([]);
@@ -65,6 +66,14 @@ function App() {
       })
     );
   };
+  // Handle edit
+  const handleEditNote = (item) => {
+    setShowEdit(true);
+    setTitle(item.title);
+    setMessage(item.message);
+    setDisplayAddNotes(true);
+    console.log(item);
+  };
   // initialize Note to equal notes
   useEffect(() => {
     setNote({
@@ -88,12 +97,17 @@ function App() {
           handleMessage={handleMessage}
           message={message}
           title={title}
+          showEdit={showEdit}
         />
       ) : (
         ""
       )}
       {notes.length > 0 ? (
-        <Notes notes={notes} deleteNote={handleDeleteNote} />
+        <Notes
+          notes={notes}
+          deleteNote={handleDeleteNote}
+          editNote={handleEditNote}
+        />
       ) : (
         <ul className="default-smg">
           <li>

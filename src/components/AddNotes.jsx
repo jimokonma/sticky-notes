@@ -18,7 +18,11 @@ const AddNotes = (props) => {
       ></textarea>
       <span>
         <div onClick={() => console.log("listening..")}>audio</div>
-        <button type="submit">save</button>
+        {!props.showEdit ? (
+          <button type="submit">save</button>
+        ) : (
+          <div onClick={props.handleEdit()}>Save Edit</div>
+        )}
       </span>
     </form>
   );

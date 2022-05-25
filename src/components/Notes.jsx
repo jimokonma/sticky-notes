@@ -9,6 +9,7 @@ const Notes = (props) => {
             key={index}
             index={index}
             deleteNote={props.deleteNote}
+            editNote={props.editNote}
           />
         );
       })}

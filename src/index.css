@@ -114,18 +114,38 @@ form textarea {
   position: relative;
 }
 
-.note h2 {
+.note .note-header {
+  border-bottom: 1px solid #2f8f9d;
+}
+
+.note .note-header h2 {
   font-weight: normal;
   font-family: "Itim", cursive;
-  border-bottom: 1px solid #2f8f9d;
   margin: 0px;
+}
+
+.note .note-header .edit {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+}
+
+.note .note-header .edit img {
+  width: 20px;
+}
+
+.note .note-header .edit img:active {
+  width: 19px;
+  height: 19px;
 }
 
 .note p {
   font-size: small;
 }
 
-.note button {
+.note .delete {
   background: none;
   border: none;
   position: absolute;
@@ -133,11 +153,11 @@ form textarea {
   right: 25px;
 }
 
-.note button img {
+.note .delete img {
   width: 20px;
 }
 
-.note button img:active {
+.note .delete img:active {
   width: 19px;
   height: 19px;
 }

@@ -86,16 +86,32 @@ form {
   box-shadow: 5px 4px 15px 3px rgba(105, 105, 105, 0.1);
   border-radius: 10px;
   position: relative;
-  h2 {
-    font-weight: normal;
-    font-family: $itim-font;
+  .note-header {
     border-bottom: 1px solid #2f8f9d;
-    margin: 0px;
+    h2 {
+      font-weight: normal;
+      font-family: $itim-font;
+      margin: 0px;
+    }
+    .edit {
+      background: none;
+      border: none;
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      img {
+        width: 20px;
+      }
+      img:active {
+        width: 19px;
+        height: 19px;
+      }
+    }
   }
   p {
     font-size: small;
   }
-  button {
+  .delete {
     background: none;
     border: none;
     position: absolute;
