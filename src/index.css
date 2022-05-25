@@ -1,0 +1,160 @@
+.App {
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  background-color: #251d3a;
+  font-family: "Itim", cursive;
+}
+
+nav h1 {
+  font-size: 50px;
+}
+
+nav button {
+  position: absolute;
+  right: 20%;
+  top: 20px;
+  background: none;
+  border: none;
+  font-style: bold;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+form {
+  position: absolute;
+  top: 75px;
+  right: 5%;
+  z-index: 99;
+  width: 350px;
+  height: 200px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: #ffffff;
+  -webkit-box-shadow: 5px 4px 25px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 4px 25px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+form label {
+  font-family: "Itim", cursive;
+  font-size: 15px;
+}
+
+form span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+}
+
+form input,
+form textarea {
+  padding: 5px;
+  outline: none;
+  border: none;
+  background-color: #f7f7f7;
+  margin: 6px 0px;
+}
+
+.notes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.note {
+  width: 200px;
+  height: 220px;
+  padding: 15px;
+  margin: 20px;
+  -webkit-box-shadow: 5px 4px 15px 3px rgba(105, 105, 105, 0.1);
+          box-shadow: 5px 4px 15px 3px rgba(105, 105, 105, 0.1);
+  border-radius: 10px;
+  position: relative;
+}
+
+.note h2 {
+  font-weight: normal;
+  font-family: "Itim", cursive;
+  border-bottom: 1px solid #2f8f9d;
+  margin: 0px;
+}
+
+.note p {
+  font-size: small;
+}
+
+.note button {
+  background: none;
+  border: none;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+}
+
+.note button img {
+  width: 20px;
+}
+
+.note button img:active {
+  width: 19px;
+  height: 19px;
+}
+
+.default-smg {
+  list-style: none;
+  text-align: center;
+  color: #7d7d7e;
+  margin-top: 5%;
+}
+
+.default-smg li {
+  margin: 0px;
+}
+
+.default-smg b {
+  font-size: 25px;
+  color: #ff7700;
+}
+/*# sourceMappingURL=index.css.map */
