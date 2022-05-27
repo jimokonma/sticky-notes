@@ -12,6 +12,7 @@ const Note = (props) => {
           <img
             src={Edit}
             alt="delete note"
+            title="Edit note"
             onClick={() => props.editNote(props.item)}
           />
         </button>
@@ -21,6 +22,7 @@ const Note = (props) => {
         <img
           src={Delete}
           alt="delete note"
+          title="Delete note"
           onClick={() => props.deleteNote(props.item.id)}
         />
       </button>

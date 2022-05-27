@@ -18,10 +18,10 @@ function App() {
     title: null,
     message: null,
   });
-  const [showEdit, setShowEdit] = useState(false);
-
   // notes store
   const [notes, setNotes] = useState([]);
+  // notes edit Id
+
   // Display Add note panel
   const handleDisplayAddNote = () => {
     setDisplayAddNotes(!displayAddNotes);
@@ -59,7 +59,6 @@ function App() {
   };
   // Handle delete
   const handleDeleteNote = (id) => {
-    console.log(id);
     setNotes(
       notes.filter((item) => {
         return item.id !== id;
@@ -67,12 +66,19 @@ function App() {
     );
   };
   // Handle edit
-  const handleEditNote = (item) => {
-    setShowEdit(true);
-    setTitle(item.title);
-    setMessage(item.message);
-    setDisplayAddNotes(true);
-    console.log(item);
+  const handleEditNote = (selectedNote) => {
+    if (!displayAddNotes) {
+      setTitle(selectedNote.title);
+      setMessage(selectedNote.message);
+      setDisplayAddNotes(true);
+      setNotes(
+        notes.filter((item) => {
+          return item.id !== selectedNote.id;
+        })
+      );
+    } else {
+      console.log("can't edit while + panel is open");
+    }
   };
   // initialize Note to equal notes
   useEffect(() => {
@@ -97,7 +103,6 @@ function App() {
           handleMessage={handleMessage}
           message={message}
           title={title}
-          showEdit={showEdit}
         />
       ) : (
         ""

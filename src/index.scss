@@ -31,14 +31,21 @@ nav {
     font-size: 50px;
   }
   button {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
     position: absolute;
     right: 20%;
     top: 20px;
-    background: none;
     border: none;
     font-style: bold;
     font-size: 40px;
     cursor: pointer;
+  }
+  button:active {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
   }
 }
 
@@ -97,8 +104,9 @@ form {
       background: none;
       border: none;
       position: absolute;
-      top: 20px;
-      right: 25px;
+      bottom: 25px;
+      right: 40px;
+      cursor: pointer;
       img {
         width: 20px;
       }
@@ -116,7 +124,8 @@ form {
     border: none;
     position: absolute;
     bottom: 25px;
-    right: 25px;
+    right: 10px;
+    cursor: pointer;
     img {
       width: 20px;
     }
@@ -137,6 +146,6 @@ form {
   }
   b {
     font-size: 25px;
-    color: #ff7700;
+    color: rgb(124, 124, 124);
   }
 }

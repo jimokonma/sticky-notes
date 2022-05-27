@@ -17,12 +17,16 @@ const AddNotes = (props) => {
         value={props.message}
       ></textarea>
       <span>
-        <div onClick={() => console.log("listening..")}>audio</div>
-        {!props.showEdit ? (
-          <button type="submit">save</button>
-        ) : (
-          <div onClick={props.handleEdit()}>Save Edit</div>
-        )}
+        <div onClick={() => console.log("listening..")}>
+          <img
+            src="https://www.figma.com/file/wnO1uQIoRQxJPOjcIXAhGp/Untitled?node-id=35%3A2"
+            alt="voice input"
+            title="voice input"
+          />
+        </div>
+        <button type="submit" title="Save note">
+          save
+        </button>
       </span>
     </form>
   );
