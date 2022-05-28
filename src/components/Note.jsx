@@ -1,5 +1,6 @@
 import Delete from "../images/delete-icon.png";
 import Edit from "../images/edit.png";
+import EditGray from "../images/edit-gray.png";
 const Note = (props) => {
   return (
     <div
@@ -8,9 +9,13 @@ const Note = (props) => {
     >
       <div className="note-header">
         <h2>{props.item.title}</h2>
-        <button className="edit">
+
+        <button
+          className="edit"
+          style={{ cursor: props.displayAddNotes ? "no-drop" : "pointer" }}
+        >
           <img
-            src={Edit}
+            src={props.displayAddNotes ? EditGray : Edit}
             alt="delete note"
             title="Edit note"
             onClick={() => props.editNote(props.item)}

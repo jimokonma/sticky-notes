@@ -112,6 +112,7 @@ function App() {
           notes={notes}
           deleteNote={handleDeleteNote}
           editNote={handleEditNote}
+          displayAddNotes={displayAddNotes}
         />
       ) : (
         <ul className="default-smg">

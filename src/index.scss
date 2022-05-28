@@ -74,7 +74,7 @@ form {
   }
   input,
   textarea {
-    padding: 5px;
+    padding: 10px 5px;
     outline: none;
     border: none;
     background-color: #f7f7f7;
@@ -106,7 +106,6 @@ form {
       position: absolute;
       bottom: 25px;
       right: 40px;
-      cursor: pointer;
       img {
         width: 20px;
       }

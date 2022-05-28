@@ -10,6 +10,7 @@ const Notes = (props) => {
             index={index}
             deleteNote={props.deleteNote}
             editNote={props.editNote}
+            displayAddNotes={props.displayAddNotes}
           />
         );
       })}

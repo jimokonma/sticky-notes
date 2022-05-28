@@ -96,7 +96,7 @@ form span {
 
 form input,
 form textarea {
-  padding: 5px;
+  padding: 10px 5px;
   outline: none;
   border: none;
   background-color: #f7f7f7;
@@ -138,7 +138,6 @@ form textarea {
   position: absolute;
   bottom: 25px;
   right: 40px;
-  cursor: pointer;
 }
 
 .note .note-header .edit img {
