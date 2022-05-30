@@ -94,7 +94,7 @@ function App() {
         displayNotes={handleDisplayAddNote}
         noteStates={displayAddNotes}
       />
-
+      {/*  */}
       {displayAddNotes ? (
         <AddNotes
           note={note}
