@@ -1,6 +1,22 @@
-import { useState, useEffect } from "react";
+import SpeechRecognition, {
+  useSpeechRecognition,
+} from "react-speech-recognition";
+import Mic from "../images/mic.png";
+import NoMic from "../images/no-mic.png";
+import Save from "../images/save.png";
 
 const AddNotes = (props) => {
+  const {
+    transcript,
+    listening,
+    resetTranscript,
+    browserSupportsSpeechRecognition,
+  } = useSpeechRecognition();
+
+  if (!browserSupportsSpeechRecognition) {
+    return <span>Browser doesn't support speech recognition.</span>;
+  }
+
   return (
     <form onSubmit={props.saveNote}>
       <label>Title</label>
@@ -16,18 +32,23 @@ const AddNotes = (props) => {
         rows="5"
         placeholder="enter note"
         onChange={props.handleMessage}
-        value={props.message}
+        value={props.message || transcript}
       ></textarea>
       <span>
-        <div onClick={() => console.log("listening..")}>
-          <img
-            src="https://www.figma.com/file/wnO1uQIoRQxJPOjcIXAhGp/Untitled?node-id=35%3A2"
-            alt="voice input"
-            title="voice input"
-          />
+        <div>
+          {listening ? (
+            <button onClick={SpeechRecognition.stopListening} className="icon">
+              <img src={NoMic} alt="stop listing" />
+            </button>
+          ) : (
+            <button onClick={SpeechRecognition.startListening} className="icon">
+              {" "}
+              <img src={Mic} alt="start listing" />
+            </button>
+          )}
         </div>
-        <button type="submit" title="Save note">
-          save
+        <button type="submit" title="Save note" className="icon">
+          <img src={Save} alt="Save note" />
         </button>
       </span>
     </form>

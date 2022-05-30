@@ -11,6 +11,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-holder {
+  width: 90%;
+  margin: 0px auto;
+  position: absolute;
+  bottom: 10px;
+  text-align: right;
+}
+
+.icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon img {
+  width: 20px;
+}
+
+.icon img:active {
+  width: 19px;
+  height: 19px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
@@ -132,43 +155,8 @@ form textarea {
   margin: 0px;
 }
 
-.note .note-header .edit {
-  background: none;
-  border: none;
-  position: absolute;
-  bottom: 25px;
-  right: 40px;
-}
-
-.note .note-header .edit img {
-  width: 20px;
-}
-
-.note .note-header .edit img:active {
-  width: 19px;
-  height: 19px;
-}
-
 .note p {
   font-size: small;
-}
-
-.note .delete {
-  background: none;
-  border: none;
-  position: absolute;
-  bottom: 25px;
-  right: 10px;
-  cursor: pointer;
-}
-
-.note .delete img {
-  width: 20px;
-}
-
-.note .delete img:active {
-  width: 19px;
-  height: 19px;
 }
 
 .default-smg {

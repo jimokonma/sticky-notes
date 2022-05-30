@@ -13,6 +13,26 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-holder {
+  width: 90%;
+  margin: 0px auto;
+  position: absolute;
+  bottom: 10px;
+  text-align: right;
+}
+.icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  img {
+    width: 20px;
+  }
+  img:active {
+    width: 19px;
+    height: 19px;
+  }
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -48,7 +68,7 @@ nav {
     border-radius: 100%;
   }
 }
-
+// Add Notes form
 form {
   position: absolute;
   top: 75px;
@@ -100,38 +120,9 @@ form {
       font-family: $itim-font;
       margin: 0px;
     }
-    .edit {
-      background: none;
-      border: none;
-      position: absolute;
-      bottom: 25px;
-      right: 40px;
-      img {
-        width: 20px;
-      }
-      img:active {
-        width: 19px;
-        height: 19px;
-      }
-    }
   }
   p {
     font-size: small;
-  }
-  .delete {
-    background: none;
-    border: none;
-    position: absolute;
-    bottom: 25px;
-    right: 10px;
-    cursor: pointer;
-    img {
-      width: 20px;
-    }
-    img:active {
-      width: 19px;
-      height: 19px;
-    }
   }
 }
 .default-smg {
