@@ -9,27 +9,27 @@ const Note = (props) => {
     >
       <div className="note-header">
         <h2>{props.item.title}</h2>
-        <p>{props.item.message}</p>
-        <div className="icon-holder">
-          <button
-            className="icon"
-            style={{ cursor: props.displayAddNotes ? "no-drop" : "pointer" }}
-            title="Edit note"
-          >
-            <img
-              src={props.displayAddNotes ? EditGray : Edit}
-              alt="delete note"
-              onClick={() => props.editNote(props.item)}
-            />
-          </button>
-          <button className="icon" title="Delete note">
-            <img
-              src={Delete}
-              alt="delete note"
-              onClick={() => props.deleteNote(props.item.id)}
-            />
-          </button>
-        </div>
+      </div>
+      <p>{props.item.message}</p>
+      <div className="icon-holder">
+        <button
+          className="icon"
+          style={{ cursor: props.displayAddNotes ? "no-drop" : "pointer" }}
+          title="Edit note"
+        >
+          <img
+            src={props.displayAddNotes ? EditGray : Edit}
+            alt="delete note"
+            onClick={() => props.editNote(props.item)}
+          />
+        </button>
+        <button className="icon" title="Delete note">
+          <img
+            src={Delete}
+            alt="delete note"
+            onClick={() => props.deleteNote(props.item.id)}
+          />
+        </button>
       </div>
     </div>
   );

@@ -136,7 +136,7 @@ form textarea {
 
 .note {
   width: 200px;
-  height: 220px;
+  min-height: 220px;
   padding: 15px;
   margin: 20px;
   -webkit-box-shadow: 5px 4px 15px 3px rgba(105, 105, 105, 0.1);
@@ -153,10 +153,12 @@ form textarea {
   font-weight: normal;
   font-family: "Itim", cursive;
   margin: 0px;
+  overflow-wrap: break-word;
 }
 
 .note p {
   font-size: small;
+  overflow-wrap: break-word;
 }
 
 .default-smg {

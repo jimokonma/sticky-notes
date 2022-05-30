@@ -107,7 +107,7 @@ form {
 }
 .note {
   width: 200px;
-  height: 220px;
+  min-height: 220px;
   padding: 15px;
   margin: 20px;
   box-shadow: 5px 4px 15px 3px rgba(105, 105, 105, 0.1);
@@ -119,10 +119,12 @@ form {
       font-weight: normal;
       font-family: $itim-font;
       margin: 0px;
+      overflow-wrap: break-word;
     }
   }
   p {
     font-size: small;
+    overflow-wrap: break-word;
   }
 }
 .default-smg {
